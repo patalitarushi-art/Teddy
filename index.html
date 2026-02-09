@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teddy Day for Yohan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="hearts"></div>
+
+<h1 class="title">💗 Happy Teddy Day, Yohan! 💗</h1>
+
+<!-- Music button -->
+<button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+<audio id="bg-music" loop>
+    <source src="music/BGM.mp3">
+</audio>
+
+<!-- Teddy -->
+<img src="images/Teddy.png" class="teddy-img" id="teddy" alt="Teddy Bear">
+
+<!-- Buttons -->
+<div class="btn-box">
+    <button class="btn" onclick="openPopup('popup1')">💌 Teddy Message</button>
+    <button class="btn" onclick="openPopup('popup2')">🎁 Surprise</button>
+    <button class="btn" onclick="openPopup('popup3')">💖 Love Letter</button>
+</div>
+
+<!-- Popup 1 -->
+<div class="popup" id="popup1">
+    <div class="popup-content">
+        <h2>🧸 For Yohan</h2>
+        <p>You deserve all the warmth and cuteness this Teddy Day.  
+        This teddy is a reminder that someone cares for you a lot! 💕</p>
+        <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+    </div>
+</div>
+
+<!-- Popup 2 -->
+<div class="popup" id="popup2">
+    <div class="popup-content">
+        <h2>🎁 Special Surprise!</h2>
+        <p>Yohan, may this Teddy Day bring you comfort, smiles and soft cuddles — FROM ME!! 🤍</p>
+        <button class="close-btn" onclick="closePopup('popup2')">Close</button>
+    </div>
+</div>
+
+<!-- Popup 3 - Love letter -->
+<div class="popup" id="popup3">
+    <div class="popup-content love-letter">
+        <h2>💖 A Love Letter for Yohan</h2>
+        <p>
+            Dear Yohan,<br><br>
+            On this Teddy Day, I can't send you a teddy…  sorry..
+            but I can make you this cuz I just learnt it hehe with every warm and soft feeling I have for you.  
+            You deserve endless affection, joy and cuddles. From me OFC. 💗
+        </p>
+        <button class="close-btn" onclick="closePopup('popup3')">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffdde1);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.title {
+    margin-top: 40px;
+    font-size: 2.8rem;
+    color: #a4004f;
+    animation: fadeIn 2s ease;
+}
+
+.teddy-img {
+    width: 230px;
+    margin-top: 20px;
+    animation: float 3s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.btn-box {
+    margin-top: 30px;
+}
+
+.btn {
+    background: #ff4f80;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d63c69;
+    transform: scale(1.05);
+}
+
+.music-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    background: #ff4f80;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Popups */
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 380px;
+    text-align: center;
+    animation: pop .4s;
+}
+
+.close-btn {
+    background: #ff4f80;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Floating hearts */
+.hearts::before,
+.hearts::after {
+    content: "❤️";
+    position: fixed;
+    animation: hearts 6s infinite linear;
+    font-size: 20px;
+}
+
+@keyframes hearts {
+    0% { top: 100%; left: 20%; transform: scale(0.5); }
+    50% { left: 25%; }
+    100% { top: -10%; left: 30%; transform: scale(1.4); }
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
