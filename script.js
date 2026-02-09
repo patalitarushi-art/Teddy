@@ -24,3 +24,20 @@ function toggleMusic() {
         music.pause();
     }
 }
+let isPlaying = false;
+
+function toggleMusic() {
+    const music = document.getElementById('bg-music');
+
+    if (!isPlaying) {
+        music.play().then(() => {
+            isPlaying = true;
+        }).catch(err => {
+            console.log("Browser blocked autoplay:", err);
+            alert("Tap the screen once, then press the Music button again 🎵");
+        });
+    } else {
+        music.pause();
+        isPlaying = false;
+    }
+}
